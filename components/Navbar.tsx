@@ -236,6 +236,8 @@ export default function Navbar({ lang }: Props) {
                               : 'min(280px, calc(100vw - 2rem))',
                           left: '50%',
                           transform: 'translateX(-50%)',
+                          backgroundColor: '#FFFFFF',
+                          border: '1px solid #E5E0D8',
                         }}
                         onMouseEnter={() => openDropdown(item.key)}
                         onMouseLeave={scheduleClose}
@@ -321,7 +323,7 @@ export default function Navbar({ lang }: Props) {
 
         {/* ── Mobile menu ── */}
         {mobileOpen && (
-          <div className="lg:hidden border-t border-ink-100 py-3 max-h-[75vh] overflow-y-auto">
+          <div className="lg:hidden border-t border-ink-100 py-3 max-h-[75vh] overflow-y-auto" style={{ backgroundColor: '#F9F7F4' }}>
             {/* Language row */}
             <div className="flex items-center gap-2 px-3 pb-3 mb-2 border-b border-ink-100">
               {languages.map((l, i) => (

@@ -54,20 +54,24 @@ export default function FAQSection({ items, lang, variant = 'default' }: Props) 
           >
             <button
               onClick={() => setOpen(isOpen ? null : originalIndex)}
-              className={`w-full flex items-center justify-between gap-4 py-4 lg:py-5 text-start transition-colors ${
-                isDark ? 'hover:text-gold' : 'hover:text-gold'
-              } ${isOpen ? (isDark ? 'text-gold' : 'text-gold') : (isDark ? 'text-cream' : 'text-[#111827]')}`}
+              className="w-full flex items-center justify-between gap-4 py-4 lg:py-5 text-start transition-colors"
               aria-expanded={isOpen}
             >
               <span
-                className="font-semibold text-base leading-snug"
-                style={{ fontFamily: bodyFont }}
+                className="font-semibold text-base leading-snug transition-colors"
+                style={{
+                  fontFamily: bodyFont,
+                  color: isOpen ? '#C9A84C' : (isDark ? '#F9F7F4' : '#111827'),
+                }}
               >
                 {question}
               </span>
-              <span className={`flex-shrink-0 text-2xl leading-none transition-transform duration-200 ${
-                isOpen ? 'rotate-45' : ''
-              }`} style={{ fontFamily: bodyFont }}>
+              <span
+                className={`flex-shrink-0 text-2xl leading-none transition-transform duration-200 ${
+                  isOpen ? 'rotate-45' : ''
+                }`}
+                style={{ fontFamily: bodyFont, color: isOpen ? '#C9A84C' : (isDark ? '#F9F7F4' : '#111827') }}
+              >
                 +
               </span>
             </button>
