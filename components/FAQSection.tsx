@@ -26,6 +26,7 @@ export default function FAQSection({ items, lang, variant = 'default' }: Props) 
   const [open, setOpen] = useState<number | null>(null)
   const isDark = variant === 'dark'
   const serifFont = lang === 'ar' ? 'Amiri, serif' : 'Cormorant Garamond, Georgia, serif'
+  const bodyFont = lang === 'ar' ? "'IBM Plex Sans Arabic', sans-serif" : "'DM Sans', system-ui, sans-serif"
 
   // Filter out items missing a question in the current language.
   // This is the fix for AR questions appearing on EN pages.
@@ -59,14 +60,14 @@ export default function FAQSection({ items, lang, variant = 'default' }: Props) 
               aria-expanded={isOpen}
             >
               <span
-                className="font-medium text-base leading-snug"
-                style={{ fontFamily: serifFont }}
+                className="font-semibold text-base leading-snug"
+                style={{ fontFamily: bodyFont }}
               >
                 {question}
               </span>
-              <span className={`flex-shrink-0 text-xl leading-none transition-transform duration-200 ${
+              <span className={`flex-shrink-0 text-2xl leading-none transition-transform duration-200 ${
                 isOpen ? 'rotate-45' : ''
-              }`} style={{ fontFamily: serifFont }}>
+              }`} style={{ fontFamily: bodyFont }}>
                 +
               </span>
             </button>
@@ -78,7 +79,7 @@ export default function FAQSection({ items, lang, variant = 'default' }: Props) 
                   className={`pb-5 text-base leading-[1.85] ${
                     isDark ? 'text-ink-200' : 'text-ink-600'
                   }`}
-                  style={{ fontFamily: serifFont }}
+                  style={{ fontFamily: bodyFont }}
                 >
                   {answer}
                 </p>

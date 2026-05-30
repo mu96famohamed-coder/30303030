@@ -427,7 +427,7 @@ export default async function HomePage({ params }: Props) {
               >
                 {t(S.specialist_title, lang)}
               </h3>
-              <p className="text-sm sm:text-[15px] leading-relaxed mb-6" style={{ color: '#9CA3AF' }}>
+              <p className="text-sm sm:text-[15px] leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
                 {t(S.specialist_sub, lang)}
               </p>
               <Link
