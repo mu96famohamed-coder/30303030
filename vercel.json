@@ -34,6 +34,5 @@
     }
   ],
   "redirects": [],
-  "rewrites": [],
-  "nodeVersion": "20.x"
+  "rewrites": []
 }
