@@ -412,9 +412,9 @@
   .footer-link {
     @apply text-sm transition-colors;
     font-family: 'DM Sans', system-ui, sans-serif;
-    color: #D1D5DB;
+    color: #374151;
   }
-  .footer-link:hover { color: white; }
+  .footer-link:hover { color: #C9A84C; }
 
   /* ── WhatsApp floating button ──────────────────────────────────────────── */
   .wa-float {

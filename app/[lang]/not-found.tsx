@@ -11,7 +11,7 @@ export default function LangNotFound() {
   const tx = T[lang] || T.en
   const homeHref = `/${lang in T ? lang : 'en'}`
   const isRTL = lang === 'ar'
-  const serif = isRTL ? 'Amiri, serif' : 'Instrument Serif, serif'
+  const serif = isRTL ? 'Amiri, serif' : 'Cormorant Garamond, Georgia, serif'
 
   return (
     <div
